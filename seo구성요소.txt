@@ -1,0 +1,48 @@
+[ bawoom.kr — 배움 | 전국 교육기관 검색 플랫폼 ]
+
+■ title: 배움 | 전국 교육기관 검색 플랫폼
+■ description: 전국 12,841개 교육기관을 지역·과목별로 검색하고 비교하세요.
+■ keywords: 교육기관검색, 지역교육, 초등교육, 중등교육, 고등교육, 지역별교육, 과목별교육, 교육비교
+
+─────────────────────────────────────────
+
+<!-- 구조화 데이터: EducationalOrganization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://bawoom.kr/#organization",
+  "name": "배움",
+  "alternateName": ["배움 검색", "Bawoom"],
+  "url": "https://bawoom.kr",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://bawoom.kr/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+  },
+  "image": "https://bawoom.kr/apple-touch-icon.png",
+  "description": "학원 지역·과목별로 검색하고 비교",
+  "areaServed": "대한민국",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "KR"
+  }
+}
+</script>
+
+<!-- 구조화 데이터: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://bawoom.kr/#website",
+  "name": "배움",
+  "alternateName": ["배움 검색", "Bawoom"],
+  "url": "https://bawoom.kr",
+  "publisher": {
+    "@id": "https://bawoom.kr/#organization"
+  },
+  "inLanguage": "ko-KR"
+}
+</script>

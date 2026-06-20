@@ -6,6 +6,13 @@
   <title>경기도 학원 | 믿음직한 멘토</title>
   <meta name="robots" content="index,follow">
   <meta name="description" content="경기도 학원 믿음직한 멘토와 함께하는 영어 학습 환경을 소개합니다">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="경기도 학원 | 믿음직한 멘토">
+  <meta property="og:description" content="경기도 학원 믿음직한 멘토와 함께하는 영어 학습 환경을 소개합니다">
+  <meta property="og:url" content="https://bawoom.kr/경기도/">
+  <meta property="og:image" content="https://bawoom.kr/img/bw-interior.webp">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1365">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://nam.veta.naver.com" crossorigin>
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -224,31 +231,35 @@
     .cur-item::before { margin-top:1px; content:'·'; color:#FF4714; flex-shrink:0; font-weight:900; }
     .cur-item strong { color:#fff; font-weight:700; }
 
+    /* ── AI 이미지 ── */
+    .ai-img-wrap { background: #fff; padding: 0 24px 56px; }
+    .ai-img { display: block; width: 100%; border-radius: 20px; max-width: 720px; margin: 0 auto; }
+
     /* ── 추천 ── */
-    .rec-section { background:#fff; padding:72px 20px 80px; }
+    .rec-section { padding:72px 20px 80px; background:#fff; }
     .rec-inner { max-width:900px; margin:0 auto; }
-    .rec-eyebrow { text-align:center; font-size:.72rem; color:#FF4714; text-transform:uppercase; letter-spacing:.14em; font-weight:900; margin-bottom:12px; }
-    .rec-title { color:#111; font-weight:900; line-height:1.35; font-size:clamp(1.6rem,4vw,2.2rem); margin-bottom:48px; letter-spacing:-.04em; text-align:center; }
-    .rec-cards { gap:16px; flex-direction:column; display:flex; }
-    @media(min-width:640px){ .rec-cards{ gap:18px; flex-direction:row; } .rec-card{ flex:1; } }
-    .rec-card { overflow:hidden; flex-direction:column; position:relative; gap:14px; padding:28px 24px 26px; background:#fafafa; border:1px solid #f0f0f0; display:flex; border-radius:20px; }
-    .rec-card::before { right:0; content:''; position:absolute; height:3px; top:0; left:0; background:linear-gradient(90deg,#FF4714,#f5af19); }
+    .rec-eyebrow { letter-spacing:.14em; font-weight:900; color:#FF4714; margin-bottom:12px; font-size:.72rem; text-transform:uppercase; text-align:center; }
+    .rec-title { margin-bottom:48px; color:#111; letter-spacing:-.04em; font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.35; text-align:center; font-weight:900; }
+    .rec-cards { gap:16px; display:flex; flex-direction:column; }
+    @media(min-width:640px){ .rec-cards{ flex-direction:row; gap:18px; } .rec-card{ flex:1; } }
+    .rec-card { display:flex; border-radius:20px; padding:28px 24px 26px; position:relative; background:#fafafa; border:1px solid #f0f0f0; gap:14px; overflow:hidden; flex-direction:column; }
+    .rec-card::before { top:0; background:linear-gradient(90deg,#FF4714,#f5af19); position:absolute; height:3px; right:0; content:''; left:0; }
     .rec-num { font-size:2.6rem; font-weight:900; background:linear-gradient(135deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
-    .rec-card-title { font-weight:900; color:#111; font-size:1.08rem; line-height:1.45; }
-    .rec-card-desc { color:#888; flex:1; font-size:.83rem; line-height:1.75; }
-    .rec-check { display:flex; font-weight:700; align-items:center; gap:7px; border-radius:8px; background:#fff5f2; color:#444; padding:8px 12px; font-size:.82rem; }
-    .rec-check::before { color:#FF4714; flex-shrink:0; font-weight:900; content:'✓'; font-size:.9rem; }
-    .rec-footer { text-align:center; border:1px solid #fde8df; margin-top:44px; padding:28px 24px; background:linear-gradient(135deg,#fff7f4,#fffdf0); border-radius:16px; }
-    .rec-footer-text { color:#111; font-size:clamp(1rem,3vw,1.18rem); line-height:1.7; font-weight:700; }
+    .rec-card-title { font-weight:900; line-height:1.45; color:#111; font-size:1.08rem; }
+    .rec-card-desc { color:#888; line-height:1.75; flex:1; font-size:.83rem; }
+    .rec-check { gap:7px; align-items:center; border-radius:8px; padding:8px 12px; display:flex; background:#fff5f2; color:#444; font-weight:700; font-size:.82rem; }
+    .rec-check::before { flex-shrink:0; content:'✓'; color:#FF4714; font-weight:900; font-size:.9rem; }
+    .rec-footer { background:linear-gradient(135deg,#fff7f4,#fffdf0); text-align:center; border-radius:16px; margin-top:44px; border:1px solid #fde8df; padding:28px 24px; }
+    .rec-footer-text { font-weight:700; line-height:1.7; color:#111; font-size:clamp(1rem,3vw,1.18rem); }
     .rec-footer-hl { background:linear-gradient(90deg,#FF4714,#f5af19); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:900; }
 
     /* ── SECTIONS COMMON (유동 영역) ── */
     .sec { padding: 90px 24px; }
-    .sec-inner { margin: 0 auto; max-width: 960px; }
+    .sec-inner { max-width: 960px; margin: 0 auto; }
     .sec-dark { background: #f8f8f8; }
     .sec-light { background: #fdfcf8; }
     .sec-mid { background: #f4f4f0; }
-    .sec h2 { font-weight: 900; font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: #111; line-height: 1.3; margin-bottom: 20px; word-break: keep-all; letter-spacing: -.03em; }
+    .sec h2 { font-weight: 900; font-size: clamp(1.6rem, 3.5vw, 2.2rem); letter-spacing: -.03em; color: #111; margin-bottom: 20px; line-height: 1.3; word-break: keep-all; }
     .sec h3 { color: #111; margin-top: 28px; line-height: 1.5; font-weight: 900; margin-bottom: 16px; font-size: 1.05rem; }
     .sec-divider { height: 3px; border-radius: 2px; background: #FF4714; width: 48px; margin-bottom: 24px; }
     .body-text { font-size: 1rem; line-height: 1.85; color: #555; word-break: keep-all; }
@@ -298,12 +309,13 @@
     .lk-section { border-bottom: 1px solid #ebebeb; background: #f8f8f6; padding: 64px 24px 56px; }
     .lk-eyebrow { margin-bottom: 12px; color: #FF4714; text-transform: uppercase; font-size: .68rem; font-weight: 900; letter-spacing: .22em; display: block; }
     .lk-section h2 { line-height: 1.25; letter-spacing: -.04em; font-weight: 900; color: #111; margin-bottom: 36px; font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+    #lk-section h3 { line-height: 1.25; margin-bottom: 36px; font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 900; color: #111; letter-spacing: -.04em; }
     .lk-group { margin-bottom: 28px; }
     .lk-group:last-child { margin-bottom: 0; }
-    .lk-h3 { padding-bottom: 10px; letter-spacing: .18em; border-bottom: 2px solid #FF4714; color: #FF4714; font-weight: 900; display: block; font-size: .72rem; text-transform: uppercase; margin-bottom: 12px; }
-    .lk-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); }
-    .lk-item { display: block; border: 1.5px solid #e8e8e8; overflow: hidden; font-size: .84rem; border-radius: 12px; font-weight: 700; text-decoration: none; text-align: center; padding: 0 16px; box-shadow: 0 2px 8px rgba(0,0,0,.04); background: #fff; color: #333; white-space: nowrap; text-overflow: ellipsis; transition: all .2s; height: 52px; line-height: 52px; }
-    .lk-item:hover { background: #FF4714; border-color: #FF4714; color: #fff; box-shadow: 0 6px 20px rgba(255,71,20,.28); transform: translateY(-2px); }
+    .lk-h3 { border-bottom: 2px solid #FF4714; font-weight: 900; text-transform: uppercase; letter-spacing: .18em; color: #FF4714; display: block; padding-bottom: 10px; font-size: .72rem; margin-bottom: 12px; }
+    .lk-grid { grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 10px; display: grid; }
+    .lk-item { background: #fff; display: block; overflow: hidden; border: 1.5px solid #e8e8e8; box-shadow: 0 2px 8px rgba(0,0,0,.04); font-size: .84rem; white-space: nowrap; text-align: center; text-overflow: ellipsis; text-decoration: none; transition: all .2s; border-radius: 12px; font-weight: 700; height: 52px; padding: 0 16px; line-height: 52px; color: #333; }
+    .lk-item:hover { color: #fff; border-color: #FF4714; transform: translateY(-2px); background: #FF4714; box-shadow: 0 6px 20px rgba(255,71,20,.28); }
     @media (max-width: 480px) {
       .lk-section { padding: 48px 20px 44px; }
       .lk-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -315,7 +327,7 @@
     /* ── 방법론 이미지 ── */
     .method-section { padding: 0 24px 72px; background: #fff; }
     .method-inner { margin: 0 auto; max-width: 480px; }
-    .method-img { display: block; width: 100%; box-shadow: 0 8px 28px rgba(0,0,0,.10); border-radius: 20px; }
+    .method-img { box-shadow: 0 8px 28px rgba(0,0,0,.10); width: 100%; display: block; border-radius: 20px; }
 
     /* bawoom.kr micro-variation */
     .body-text { line-height: 1.86; }
@@ -325,7 +337,7 @@
     .header-logo { background: linear-gradient(90deg, #FF4714, #f5af19); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     /* dynamic section */
     .sec h2 { letter-spacing: -.04em; font-size: clamp(1.65rem,3.6vw,2.3rem); }
-    .sec-divider { background: #FF4714; width: 52px; }
+    .sec-divider { width: 52px; background: #FF4714; }
     .sec-light { background: #fdfcf8; }
     .sec-dark { background: #f7f7f7; }
     .sec-mid { background: #f3f3ef; }
@@ -435,7 +447,7 @@
     <p class="monologue">방법을 몰라서<br>다녀도 안늘러요...</p>
     <p class="monologue">공부 의지가 없어서<br>걱정이에요...</p>
     <div class="fact-box">
-      <p class="fact-title">지금까지 학원</p>
+      <p class="fact-title">경기도 학원</p>
       <p class="fact-title"><span class="simple-underline">이거 체크하셨나요?</span></p>
     </div>
   </div>
@@ -731,14 +743,18 @@
   </div>
 </section>
 
+<div class="ai-img-wrap">
+  <img class="ai-img" src="/webp/1773438595_e944e070.webp" alt="경기도 학원" loading="lazy">
+</div>
+
 <section class="planner-section">
   <div class="planner-inner">
     <p class="planner-eyebrow">ACADEMY LOCATION</p>
     <p class="planner-title">학생에게 모든 걸 맞춘<br><em>우리동네 와와학원</em></p>
     <div class="planner-img-wrap">
       <picture>
-        <source media="(max-width:768px)" srcset="/img_m/위치사진/.webp" width="750" height="750">
-        <img src="/img/위치사진/.webp" alt="경기도 학원 배움 학원 위치" width="1024" height="1024" loading="lazy">
+        <source media="(max-width:768px)" srcset="/img_m/위치사진/노원구 하계동.webp.webp" width="750" height="750">
+        <img src="/img/위치사진/노원구 하계동.webp.webp" alt="경기도 학원 배움 학원 위치" width="1024" height="1024" loading="lazy">
       </picture>
     </div>
   </div>
@@ -756,7 +772,7 @@
      유동 영역 (DYNAMIC — result.html JSON)
      ════════════════════════════════════════════ -->
 
-<section class="sec sec-light">
+<section class="sec sec-light" id="sec1">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>경기도 학원</h2>
@@ -770,7 +786,7 @@
   </div>
 </section>
 
-<section class="sec sec-dark">
+<section class="sec sec-dark" id="sec2">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>학년별 수업 특징</h2>
@@ -805,10 +821,10 @@
   </div>
 </section>
 
-<section class="sec sec-mid">
+<section class="sec sec-mid" id="sec3">
   <div class="sec-inner">
     <div class="sec-divider"></div>
-    <h2>관리 학교</h2>
+    <h2>경기도 관리 학교</h2>
     <p class="body-text">인근 초등학교인 XXX초와 협력해 교과 연계 영어 프로그램을 운영하고 있어요.<br><br>중학교인 YYY중과는 내신 시험 대비 특강을 제공하며, 고등학교인 ZZZ고와는 대학 입시 영어 전략을 맞춤 설계해요.<br><br>각각의 학교마다 출제 경향과 수행평가 비중이 다르기 때문에, 교육기관에서는 이를 분석해 맞춤 커리큘럼을 제공해요.<br><br>학생들은 학교 수업과 연계된 복습을 통해 학습 효율을 높일 수 있고, 학부모님은 자녀의 진도 파악이 쉬워요.<br><br>이런 맞춤형 지원이 믿음직한 멘토와 함께라면 효과가 배가돼요.</p>
     <ul class="check-list">
       <li class="check-item"><span class="check-icon">✓</span>초등학교와 연계 프로그램 운영</li>
@@ -818,7 +834,7 @@
   </div>
 </section>
 
-<section class="sec sec-light">
+<section class="sec sec-light" id="sec4">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>학원, 어떻게 해야할까?</h2>
@@ -828,7 +844,7 @@
   </div>
 </section>
 
-<section class="sec sec-dark">
+<section class="sec sec-dark" id="sec5">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>체계적 커리큘럼</h2>
@@ -836,7 +852,7 @@
   </div>
 </section>
 
-<section class="sec sec-mid">
+<section class="sec sec-mid" id="sec6">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>추천하는 학생</h2>
@@ -844,7 +860,7 @@
   </div>
 </section>
 
-<section class="sec sec-light">
+<section class="sec sec-light" id="sec7">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>학원 전략</h2>
@@ -854,7 +870,7 @@
   </div>
 </section>
 
-<section class="sec sec-dark">
+<section class="sec sec-dark" id="sec8">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>꿈꾸는영어교습소 소개</h2>
@@ -867,7 +883,7 @@
 <section class="sec sec-light" id="info">
   <div class="sec-inner">
     <div class="sec-divider"></div>
-    <h2>학원 정보</h2>
+    <h2>경기도 학원 정보</h2>
     <div class="table-wrap">
       <table class="info-table">
         <tr>
@@ -887,7 +903,7 @@
   </div>
 </section>
 
-<section class="sec sec-mid">
+<section class="sec sec-mid" id="faq">
   <div class="sec-inner">
     <div class="sec-divider"></div>
     <h2>자주 묻는 질문</h2>
@@ -916,8 +932,203 @@
   </div>
 </section>
 
+<section class="sec sec-light" id="lk-section">
+  <div class="sec-inner">
+    <div class="sec-divider"></div>
+    <h3>더 자세한 정보</h3>
+    <div class="lk-group">
+      <div class="lk-grid">
+        <a class="lk-item" href="/경기도/덕이동/">덕이동</a>
+        <a class="lk-item" href="/경기도/부발읍/">부발읍</a>
+        <a class="lk-item" href="/경기도/동패동/">동패동</a>
+        <a class="lk-item" href="/경기도/동백동/">동백동</a>
+        <a class="lk-item" href="/경기도/영덕동/">영덕동</a>
+        <a class="lk-item" href="/경기도/장항동/">장항동</a>
+        <a class="lk-item" href="/경기도/비전동/">비전동</a>
+        <a class="lk-item" href="/경기도/수청동/">수청동</a>
+        <a class="lk-item" href="/경기도/평내/">평내</a>
+        <a class="lk-item" href="/경기도/후곡/">후곡</a>
+        <a class="lk-item" href="/경기도/미금/">미금</a>
+        <a class="lk-item" href="/경기도/부천상동/">부천상동</a>
+        <a class="lk-item" href="/경기도/세교/">세교</a>
+        <a class="lk-item" href="/경기도/하남풍산동/">하남풍산동</a>
+        <a class="lk-item" href="/경기도/행신동/">행신동</a>
+        <a class="lk-item" href="/경기도/소하동/">소하동</a>
+        <a class="lk-item" href="/경기도/초지동/">초지동</a>
+        <a class="lk-item" href="/경기도/수진/">수진</a>
+        <a class="lk-item" href="/경기도/배곧/">배곧</a>
+        <a class="lk-item" href="/경기도/인창동/">인창동</a>
+        <a class="lk-item" href="/경기도/동탄/">동탄</a>
+        <a class="lk-item" href="/경기도/신곡동/">신곡동</a>
+        <a class="lk-item" href="/경기도/비산/">비산</a>
+        <a class="lk-item" href="/경기도/이매동/">이매동</a>
+        <a class="lk-item" href="/경기도/역북동/">역북동</a>
+        <a class="lk-item" href="/경기도/신동백/">신동백</a>
+        <a class="lk-item" href="/경기도/다산/">다산</a>
+        <a class="lk-item" href="/경기도/원신동/">원신동</a>
+        <a class="lk-item" href="/경기도/신봉마을/">신봉마을</a>
+        <a class="lk-item" href="/경기도/향남읍/">향남읍</a>
+        <a class="lk-item" href="/경기도/목감/">목감</a>
+        <a class="lk-item" href="/경기도/오산세교/">오산세교</a>
+        <a class="lk-item" href="/경기도/삼송/">삼송</a>
+        <a class="lk-item" href="/경기도/내삼미동/">내삼미동</a>
+        <a class="lk-item" href="/경기도/영통/">영통</a>
+        <a class="lk-item" href="/경기도/평내동/">평내동</a>
+        <a class="lk-item" href="/경기도/별내/">별내</a>
+        <a class="lk-item" href="/경기도/망포동/">망포동</a>
+        <a class="lk-item" href="/경기도/풍동/">풍동</a>
+        <a class="lk-item" href="/경기도/덕풍동/">덕풍동</a>
+        <a class="lk-item" href="/경기도/비산동/">비산동</a>
+        <a class="lk-item" href="/경기도/운양동/">운양동</a>
+        <a class="lk-item" href="/경기도/덕풍/">덕풍</a>
+        <a class="lk-item" href="/경기도/수원금곡동/">수원금곡동</a>
+        <a class="lk-item" href="/경기도/목감동/">목감동</a>
+        <a class="lk-item" href="/경기도/비전/">비전</a>
+        <a class="lk-item" href="/경기도/용인수지/">용인수지</a>
+        <a class="lk-item" href="/경기도/퇴계원/">퇴계원</a>
+        <a class="lk-item" href="/경기도/신봉동/">신봉동</a>
+        <a class="lk-item" href="/경기도/탄벌/">탄벌</a>
+        <a class="lk-item" href="/경기도/운정/">운정</a>
+        <a class="lk-item" href="/경기도/금암동/">금암동</a>
+        <a class="lk-item" href="/경기도/북변동/">북변동</a>
+        <a class="lk-item" href="/경기도/범박동/">범박동</a>
+        <a class="lk-item" href="/경기도/고잔/">고잔</a>
+        <a class="lk-item" href="/경기도/상현동/">상현동</a>
+        <a class="lk-item" href="/경기도/주엽/">주엽</a>
+        <a class="lk-item" href="/경기도/산본역/">산본역</a>
+        <a class="lk-item" href="/경기도/풍덕천/">풍덕천</a>
+        <a class="lk-item" href="/경기도/신흥동/">신흥동</a>
+        <a class="lk-item" href="/경기도/삼송동/">삼송동</a>
+        <a class="lk-item" href="/경기도/산본/">산본</a>
+        <a class="lk-item" href="/경기도/상현/">상현</a>
+        <a class="lk-item" href="/경기도/별내동/">별내동</a>
+        <a class="lk-item" href="/경기도/장기/">장기</a>
+        <a class="lk-item" href="/경기도/김포장기동/">김포장기동</a>
+        <a class="lk-item" href="/경기도/고잔동/">고잔동</a>
+        <a class="lk-item" href="/경기도/수진동/">수진동</a>
+        <a class="lk-item" href="/경기도/풍산동/">풍산동</a>
+        <a class="lk-item" href="/경기도/풍덕천동/">풍덕천동</a>
+        <a class="lk-item" href="/경기도/옥정/">옥정</a>
+        <a class="lk-item" href="/경기도/호매실/">호매실</a>
+        <a class="lk-item" href="/경기도/망월/">망월</a>
+        <a class="lk-item" href="/경기도/야탑/">야탑</a>
+        <a class="lk-item" href="/경기도/호평동/">호평동</a>
+        <a class="lk-item" href="/경기도/일산동/">일산동</a>
+        <a class="lk-item" href="/경기도/영천/">영천</a>
+        <a class="lk-item" href="/경기도/영통동/">영통동</a>
+        <a class="lk-item" href="/경기도/금오동/">금오동</a>
+        <a class="lk-item" href="/경기도/운양역/">운양역</a>
+        <a class="lk-item" href="/경기도/영통구/">영통구</a>
+        <a class="lk-item" href="/경기도/철산/">철산</a>
+        <a class="lk-item" href="/경기도/세교동/">세교동</a>
+        <a class="lk-item" href="/경기도/이충동/">이충동</a>
+        <a class="lk-item" href="/경기도/병점/">병점</a>
+        <a class="lk-item" href="/경기도/행신/">행신</a>
+        <a class="lk-item" href="/경기도/일산대화/">일산대화</a>
+        <a class="lk-item" href="/경기도/다산지금/">다산지금</a>
+        <a class="lk-item" href="/경기도/부발/">부발</a>
+        <a class="lk-item" href="/경기도/장기동/">장기동</a>
+        <a class="lk-item" href="/경기도/이매/">이매</a>
+        <a class="lk-item" href="/경기도/신원동/">신원동</a>
+        <a class="lk-item" href="/경기도/금릉/">금릉</a>
+        <a class="lk-item" href="/경기도/정자동/">정자동</a>
+        <a class="lk-item" href="/경기도/동백/">동백</a>
+        <a class="lk-item" href="/경기도/화정/">화정</a>
+        <a class="lk-item" href="/경기도/천천동/">천천동</a>
+        <a class="lk-item" href="/경기도/배곧동/">배곧동</a>
+        <a class="lk-item" href="/경기도/장곡/">장곡</a>
+        <a class="lk-item" href="/경기도/매탄/">매탄</a>
+        <a class="lk-item" href="/경기도/망월동/">망월동</a>
+        <a class="lk-item" href="/경기도/금곡동/">금곡동</a>
+        <a class="lk-item" href="/경기도/매탄동/">매탄동</a>
+        <a class="lk-item" href="/경기도/동탄목동/">동탄목동</a>
+        <a class="lk-item" href="/경기도/소사본동/">소사본동</a>
+        <a class="lk-item" href="/경기도/신중동/">신중동</a>
+        <a class="lk-item" href="/경기도/대야/">대야</a>
+        <a class="lk-item" href="/경기도/탄벌동/">탄벌동</a>
+        <a class="lk-item" href="/경기도/사우동/">사우동</a>
+        <a class="lk-item" href="/경기도/진접/">진접</a>
+        <a class="lk-item" href="/경기도/범박/">범박</a>
+        <a class="lk-item" href="/경기도/정발산/">정발산</a>
+        <a class="lk-item" href="/경기도/수지/">수지</a>
+        <a class="lk-item" href="/경기도/중산동/">중산동</a>
+        <a class="lk-item" href="/경기도/보라동/">보라동</a>
+        <a class="lk-item" href="/경기도/광명동/">광명동</a>
+        <a class="lk-item" href="/경기도/대야동/">대야동</a>
+        <a class="lk-item" href="/경기도/후곡마을/">후곡마을</a>
+        <a class="lk-item" href="/경기도/갈매/">갈매</a>
+        <a class="lk-item" href="/경기도/소하/">소하</a>
+        <a class="lk-item" href="/경기도/운정6동/">운정6동</a>
+        <a class="lk-item" href="/경기도/갈산동/">갈산동</a>
+        <a class="lk-item" href="/경기도/운양/">운양</a>
+        <a class="lk-item" href="/경기도/교하동/">교하동</a>
+        <a class="lk-item" href="/경기도/반송/">반송</a>
+        <a class="lk-item" href="/경기도/마두동/">마두동</a>
+        <a class="lk-item" href="/경기도/영천동/">영천동</a>
+        <a class="lk-item" href="/경기도/원흥/">원흥</a>
+        <a class="lk-item" href="/경기도/야당동/">야당동</a>
+        <a class="lk-item" href="/경기도/대화동/">대화동</a>
+        <a class="lk-item" href="/경기도/기흥역/">기흥역</a>
+        <a class="lk-item" href="/경기도/주엽역/">주엽역</a>
+        <a class="lk-item" href="/경기도/산내마을/">산내마을</a>
+        <a class="lk-item" href="/경기도/호매실동/">호매실동</a>
+        <a class="lk-item" href="/경기도/병점동/">병점동</a>
+        <a class="lk-item" href="/경기도/상동/">상동</a>
+        <a class="lk-item" href="/경기도/부천중동/">부천중동</a>
+        <a class="lk-item" href="/경기도/일산중산동/">일산중산동</a>
+        <a class="lk-item" href="/경기도/야탑동/">야탑동</a>
+        <a class="lk-item" href="/경기도/사우/">사우</a>
+        <a class="lk-item" href="/경기도/옥정동/">옥정동</a>
+        <a class="lk-item" href="/경기도/다산동/">다산동</a>
+        <a class="lk-item" href="/경기도/갈매동/">갈매동</a>
+        <a class="lk-item" href="/경기도/원당/">원당</a>
+        <a class="lk-item" href="/경기도/산본동/">산본동</a>
+        <a class="lk-item" href="/경기도/보라/">보라</a>
+        <a class="lk-item" href="/경기도/위례동/">위례동</a>
+        <a class="lk-item" href="/경기도/반송동/">반송동</a>
+        <a class="lk-item" href="/경기도/오산동/">오산동</a>
+        <a class="lk-item" href="/경기도/성사동/">성사동</a>
+        <a class="lk-item" href="/경기도/와동동/">와동동</a>
+        <a class="lk-item" href="/경기도/교하/">교하</a>
+        <a class="lk-item" href="/경기도/봉담/">봉담</a>
+        <a class="lk-item" href="/경기도/호평/">호평</a>
+        <a class="lk-item" href="/경기도/구갈동/">구갈동</a>
+        <a class="lk-item" href="/경기도/금촌/">금촌</a>
+        <a class="lk-item" href="/경기도/금촌동/">금촌동</a>
+        <a class="lk-item" href="/경기도/이충/">이충</a>
+        <a class="lk-item" href="/경기도/경안동/">경안동</a>
+        <a class="lk-item" href="/경기도/망포/">망포</a>
+        <a class="lk-item" href="/경기도/향남/">향남</a>
+        <a class="lk-item" href="/경기도/화정동/">화정동</a>
+        <a class="lk-item" href="/경기도/야당/">야당</a>
+        <a class="lk-item" href="/경기도/중동/">중동</a>
+        <a class="lk-item" href="/경기도/구미동/">구미동</a>
+        <a class="lk-item" href="/경기도/탄현동/">탄현동</a>
+        <a class="lk-item" href="/경기도/인창/">인창</a>
+        <a class="lk-item" href="/경기도/단대/">단대</a>
+        <a class="lk-item" href="/경기도/마두/">마두</a>
+        <a class="lk-item" href="/경기도/산척동/">산척동</a>
+        <a class="lk-item" href="/경기도/옥길/">옥길</a>
+        <a class="lk-item" href="/경기도/단대동/">단대동</a>
+        <a class="lk-item" href="/경기도/호수동/">호수동</a>
+        <a class="lk-item" href="/경기도/철산동/">철산동</a>
+        <a class="lk-item" href="/경기도/탄현/">탄현</a>
+        <a class="lk-item" href="/경기도/용인신봉동/">용인신봉동</a>
+        <a class="lk-item" href="/경기도/위례/">위례</a>
+        <a class="lk-item" href="/경기도/미사/">미사</a>
+        <a class="lk-item" href="/경기도/미사동/">미사동</a>
+        <a class="lk-item" href="/경기도/주엽동/">주엽동</a>
+        <a class="lk-item" href="/경기도/원흥동/">원흥동</a>
+        <a class="lk-item" href="/경기도/흥덕/">흥덕</a>
+        <a class="lk-item" href="/경기도/용인백현마을/">용인백현마을</a>
+        <a class="lk-item" href="/경기도/장곡동/">장곡동</a>
+        <a class="lk-item" href="/경기도/옥길동/">옥길동</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "관리 학교 목록", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "ElementarySchool", "name": "초등학교"}}, {"@type": "ListItem", "position": 2, "item": {"@type": "MiddleSchool", "name": "중학교"}}, {"@type": "ListItem", "position": 3, "item": {"@type": "HighSchool", "name": "고등학교"}}]}</script>
 
 <!-- ════════════════════════════════════════════
      스크립트

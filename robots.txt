@@ -4,4 +4,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://bawoom.kr/sitemap.xml
+Sitemap: https://bawoom.kr/sitemapx.xml
